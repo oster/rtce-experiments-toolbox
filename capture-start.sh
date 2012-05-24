@@ -22,8 +22,7 @@ export DISPLAY=localhost:0.0
 OUTPUT_FILE=${OUTPUT_DIR}/${STAMP}-screencast.webm
 
 gst-launch-0.10 -e ximagesrc,use-damage=0,show-pointer=1 \
-                   ! video/x-raw-rgb,framerate=10/1 \
-                   ! timeoverlay \
+                   ! video/x-raw-rgb,framerate=15/1 \
                    ! ffmpegcolorspace \
                    ! vp8enc,speed=6,quality=8,threads=2 \
                    ! webmmux \
