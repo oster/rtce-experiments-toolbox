@@ -1,7 +1,7 @@
 #! /bin/bash
 
 #
-# Shell script to run a test experiment on multiple ssh hosts.
+# Shell script to run, wait and stop a test experiment on multiple ssh hosts.
 #
 #
 

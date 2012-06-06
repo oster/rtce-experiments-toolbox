@@ -14,11 +14,3 @@ ${SSH_CMD} "mkdir ~/rtce"
 
 echo "Starting screen capture..."
 ${SSH_CMD} "./capture-start.sh ${TSTAMP} ~/rtce &" 
-
-#sleep 1200
-
-#echo "Stopping screen capture..."
-#${SSH_CMD} "./capture-stop.sh"
-
-#echo "Downloading screen capture..."
-#pslurp -h ${SSH_HOST} -r -l ${SSH_USER} /home/${SSH_USER}/rtce .
