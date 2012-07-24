@@ -1,0 +1,58 @@
+# 193.50.40.90 - user1
+# 193.50.40.97 - user2
+# 193.50.40.93 - user3
+# 193.50.40.89 - user4
+
+mkdir G9-EXP1
+mkdir G9-EXP2
+mkdir G9-EXP3
+
+# execute 3 times, the following command lines
+#
+# ./pstart.sh   # don't worry about "the timed out" failure message.
+# ./pstop.sh
+# mv 193.50.40.* G9-EXP1
+#
+# ./pclean.sh
+
+
+# get initial pad content
+./pad-get-text.sh corrections009 2 > DATA/20120724/corrections009-initial.json
+./pad-get-text.sh films009 2 > DATA/20120724/films009-initial.json
+./pad-get-text.sh notes009 2 > DATA/20120724/notes009-initial.json
+
+# get final pad content
+./pad-get-text.sh corrections009 > DATA/20120724/corrections009.json
+./pad-get-text.sh films009 > DATA/20120724/films009.json
+./pad-get-text.sh notes009 > DATA/20120724/notes009.json
+
+# get databases from EC2
+scp etherpad-amazon:~/etherpad-lite/var/dirty.db DATA/20120724/
+scp etherpad-amazon:~/etherpad-lite/var/dirtyCS.db DATA/20120724/
+scp etherpad-amazon:~/etherpad-lite/log/error.log DATA/20120724/
+scp etherpad-amazon:~/etherpad-lite/log/etherpad.log DATA/20120724/
+
+
+# get the chat log 
+./pad-get-chat.sh corrections009 > DATA/20120724/corrections009-chat.json
+./pad-get-chat.sh films009 > DATA/20120724/films009-chat.json
+./pad-get-chat.sh notes009 > DATA/20120724/notes009-chat.json
+
+# pretty chat logs
+./pretty-chat.js DATA/20120724/corrections009-chat.json  > CHATS/20120724-EXP1.txt
+./pretty-chat.js DATA/20120724/films009-chat.json  > CHATS/20120724-EXP2.txt
+./pretty-chat.js DATA/20120724/notes009-chat.json  > CHATS/20120724-EXP3.txt
+
+# pretty pads
+./pretty-pad.js DATA/20120724/corrections009-initial.json > PADS/20120724-EXP1-initial.txt
+./pretty-pad.js DATA/20120724/corrections009.json > PADS/20120724-EXP1-final.txt
+
+./pretty-pad.js DATA/20120724/films009-initial.json > PADS/20120724-EXP2-initial.txt
+./pretty-pad.js DATA/20120724/films009.json > PADS/20120724-EXP2-final.txt
+
+./pretty-pad.js DATA/20120724/notes009-initial.json > PADS/20120724-EXP3-initial.txt
+./pretty-pad.js DATA/20120724/notes009.json > PADS/20120724-EXP3-final.txt
+
+
+# edit the script (change variables) and run it (3 times)
+# rename-videos.sh
