@@ -6,7 +6,7 @@
 #
 
 TSTAMP=`./timestamp.sh`
-SSH_HOST="193.50.40.90"
+SSH_HOST="193.50.40.93"
 SSH_USER="score"
 SSH_CMD="ssh ${SSH_USER}@${SSH_HOST}"
 

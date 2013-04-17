@@ -18,7 +18,7 @@ else
 	OUTPUT_DIR=./
 fi
 
-export DISPLAY=localhost:0.0
+export DISPLAY=:0
 OUTPUT_FILE=${OUTPUT_DIR}/${STAMP}-screencast.webm
 
 gst-launch-0.10 -e ximagesrc,use-damage=0,show-pointer=1 \

@@ -3,8 +3,8 @@
 
 # dummy script to automate renaming of video recording files
 
-GROUP=G9
-EXPERIMENT=EXP1
+GROUP=G10
+EXPERIMENT=EXP3
 
 SRC_DIR=./${GROUP}-${EXPERIMENT}
 OUT_DIR=./VIDEOS_PROCESSING

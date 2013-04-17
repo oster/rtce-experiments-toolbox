@@ -10,7 +10,7 @@ SSH_USER="score"
 SSH_CMD="pssh -h ${SSH_HOST} -l ${SSH_USER}"
 
 echo "Stopping screen capture..."
-${SSH_CMD} "./capture-stop.sh"
+${SSH_CMD} "./rtce-experiments-toolbox/capture-stop.sh"
 
 sleep 10
 

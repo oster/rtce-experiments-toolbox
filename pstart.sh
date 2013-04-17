@@ -13,4 +13,4 @@ SSH_CMD="pssh -h ${SSH_HOST} -l ${SSH_USER}"
 ${SSH_CMD} "mkdir ~/rtce"
 
 echo "Starting screen capture..."
-${SSH_CMD} "./capture-start.sh ${TSTAMP} ~/rtce &" 
+${SSH_CMD} "./rtce-experiments-toolbox/capture-start.sh ${TSTAMP} ~/rtce &" 
