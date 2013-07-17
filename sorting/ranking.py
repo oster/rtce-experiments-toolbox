@@ -83,6 +83,10 @@ def remove_duplicated_and_missing_movie(standards, targets):
 def get_movies_with_title(movies, title):
 	return [ movie for movie in movies if movie['title'] == title ]
 
+
+def get_wrong_titles(standards, targets):
+	return [ movie['title'] for movie in targets if len(get_movies_with_title(standards, movie['title'])) == 0 ]		
+
 def get_wrong_year_movie_titles(standards, targets):
 	titles = [ movie['title'] for movie in targets if movie['year'] != get_movies_with_title(standards, movie['title'])[0]['year'] ]		
 	return titles

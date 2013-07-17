@@ -6,10 +6,10 @@ import re
 import pprint
 
 DATA_PATH='./DATA/'
+#DATA_PATH='./DATA-10mn/'
 files = [f for f in os.listdir(DATA_PATH) if re.match(r'films[0-9]{3}-wo-actors\.txt', f)]
-
-#DATA_PATH='./DATA-8mn/'
-#files = [f for f in os.listdir(DATA_PATH) if re.match(r'films[0-9]{3}-8mn-wo-actors\.txt', f)]
+#files = [f for f in os.listdir(DATA_PATH) if re.match(r'films[0-9]{3}-10mn-wo-actors\.txt', f)]
+#files = ["films005-6mn-wo-actors.txt"]
 
 pp = pprint.PrettyPrinter(indent=4)
 
@@ -25,6 +25,9 @@ for target_file in sorted(files):
 	del duplicated_titles
 	del missing_titles
 	(standard_movies, target_movies) = remove_duplicated_and_missing_movie(standard_movies, target_movies)
+
+	wrong_titles = get_wrong_titles(standard_movies, target_movies)
+	print '- %s wrong title element(s):\n   %s' % (len(wrong_titles), pp.pformat(wrong_titles))
 
 	wrong_year_movie_titles = get_wrong_year_movie_titles(standard_movies, target_movies)	
 	print '- %s wrong year element(s):\n   %s' % (len(wrong_year_movie_titles), pp.pformat(wrong_year_movie_titles))
