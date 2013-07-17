@@ -3,13 +3,10 @@
 import os
 import re
 
-#DATA_PATH='./DATA/'
-#DATA_PATH='./DATA-9mn/'
-#files = [f for f in os.listdir(DATA_PATH) if re.match(r'films[0-9]{3}-9mn\.txt', f)]
-#files = ["films019.txt"]
-
-DATA_PATH="/tmp/"
-files = ["films005-6mn.txt"]
+#DATA_PATH="./DATA/"
+DATA_PATH='./DATA-10mn/'
+files = [f for f in os.listdir(DATA_PATH) if re.match(r'films[0-9]{3}-10mn\.txt', f)]
+#files = ["films021.txt", "films025.txt"]
 
 for target_file in sorted(files):
 	#target_file = DATA_PATH + 'films006-9mn.txt'
