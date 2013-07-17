@@ -28,6 +28,7 @@ This file provides for each experiment the value that was used for the delay par
 | G22   |            10 | Exp.2 failed restarted on films023, Exp.2 failed restarted on films024, new etherpad_log/dirty*DB files  |
 | G25   |            10 |                                                                                                          |
 
+
 | Delay | Groups                |
 |------:|--------------~-------:|
 |     0 | 1,  6, ~~11~~, 17, 19 |

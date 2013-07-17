@@ -1,5 +1,6 @@
 # Syncing information
 
+
 | Group | File     | Timestamp of 1st changes |     User id        | Notes                                                                            |
 |       |          |      (server time)       |                    |                                                                                  |
 |------:|---------:|:------------------------:|:------------------:|:---------------------------------------------------------------------------------|
@@ -25,6 +26,7 @@
 | G21   | films021 |           1372920122841  | a.xyIz9UR3lXhTFMh6 | 08:42:02,841 [ 1372920122841 ]: 1..996                                           |
 | G22   | films024 |           1373007198159  | a.5eXQct6sNarG6j0R | 08:53:18,159 [ 1373007198159 ]: 2..197000  it crashed 2 times before             | 
 | G25   | films025 |           1374042698672  | a.llqTz4kavsGpDVx7 | 08:31:38,672 [ 1374042698672 ]: 2..008                                           |
+
 
 | Group |     File       | Timestamp of 1st changes |     User id        | Notes                                 |
 |       |                |      (server time)       |                    |                                       |
@@ -52,9 +54,10 @@
 | G22   | corrections022 |           1373005343306  | a.fEHZdRB09Sds6jMD | 08:22:23,306 [ 1373005343306 ]: nt    |
 | G25   | corrections025 |           1374041898542  | a.5eXQct6sNarG6j0R | 08:18:18,542 [ 1374041898542 ]: s     |
 
+
 # Few useful command lines
 
-run the following command to extract the timestamp of the first interesting changes 
+run the following command to extract the timestamp of the first interesting changes:
 
 ```Bash
 ./fetch-first-changes.rb films017 sorting-synching/etherpad.log.gz sorting-synching/dirtyCS.db.gz 
@@ -67,7 +70,7 @@ N=005; ./fetch-first-changes.rb corrections${N} DATA-by-num/${N}/etherpad.log.gz
 ```
 
 
-# run the following command to extract the pad at the right time (output files are generated in /tmp directory)
+run the following command to extract the pad at the right time (output files are generated in /tmp directory):
 
 ```Bash
 ./resynch-changes-to-get-revision.rb films017 sorting-synching/etherpad.log.gz sorting-synching/dirtyCS.db.gz sorting-synching/dirty.db.gz a.GXaGD5oiTgPmEMN5 1369722157631
