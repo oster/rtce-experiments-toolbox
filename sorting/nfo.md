@@ -6,9 +6,6 @@ ranking.py                      small Python library that provides functions to:
 
 ranking-correlation.py          Python script that uses ranking.py library to compute the correlation
                                 for a set of files.
-
-ranking-correlation-test.py     duplicated code from ranking-correlation.py to make quick and dirty test
-                                on one file.
 							
 time-series.py					Python script that performs a time series analysis for a set of files
 
