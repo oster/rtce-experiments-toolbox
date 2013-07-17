@@ -68,17 +68,17 @@ data = {
               :userid => 'a.bptKNCIHFQnLXyvD'
           }
     },
-    11 => { :group => 11,
-            :delay => 0, 
-            :corrections => {
-              :timestamp => 1366265973419,
-              :userid => 'a.JbwK9KlqpJV2vjBE'
-          },
-            :films => {
-              :timestamp => 1366266649038,
-              :userid => 'a.xD0XdvZ82CskICbL'
-          }
-    },
+#    11 => { :group => 11,
+#            :delay => 0, 
+#            :corrections => {
+#              :timestamp => 1366265973419,
+#              :userid => 'a.JbwK9KlqpJV2vjBE'
+#          },
+#            :films => {
+#              :timestamp => 1366266649038,
+#              :userid => 'a.xD0XdvZ82CskICbL'
+#          }
+#    },
     12 => { :group => 12,
             :delay => 6, 
             :corrections => {
@@ -179,7 +179,7 @@ data = {
             }
     },
 #    22 => { :group => 22,
-#            :delay => 0,       
+#            :delay => 10,       
 #            :corrections => { # should be used with *-failed.gz files! 
 #              :timestamp => 1373005343306,
 #              :userid => 'a.fEHZdRB09Sds6jMD'
@@ -189,6 +189,17 @@ data = {
 #              :userid => 'a.5eXQct6sNarG6j0R'
 #            }
 #    },
+    25 => { :group => 25,
+            :delay => 10,       
+            :corrections => {
+              :timestamp => 1374041898542,
+              :userid => 'a.5eXQct6sNarG6j0R'
+            },
+            :films => {
+              :timestamp => 1374042698672,
+              :userid => 'a.llqTz4kavsGpDVx7'
+            }
+    },
 }
 
 
