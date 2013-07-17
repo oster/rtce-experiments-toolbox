@@ -2,7 +2,6 @@
 
 
 | Group | File     | Timestamp of 1st changes |     User id        | Notes                                                                            |
-|       |          |      (server time)       |                    |                                                                                  |
 |------:|---------:|:------------------------:|:------------------:|:---------------------------------------------------------------------------------|
 |  G1   | films001 |           XXXXXXXXXXXXX  |                    |                                                                                  |
 |  G2   | films002 |           XXXXXXXXXXXXX  |                    |                                                                                  |
@@ -29,7 +28,6 @@
 
 
 | Group |     File       | Timestamp of 1st changes |     User id        | Notes                                 |
-|       |                |      (server time)       |                    |                                       |
 |------:|---------------:|:------------------------:|:------------------:|:--------------------------------------|
 |  G1   | corrections001 |           XXXXXXXXXXXXX  |                    |                                       |
 |  G2   | corrections002 |           XXXXXXXXXXXXX  |                    |                                       |
@@ -58,26 +56,20 @@
 # Few useful command lines
 
 run the following command to extract the timestamp of the first interesting changes:
-
 ```Bash
 ./fetch-first-changes.rb films017 sorting-synching/etherpad.log.gz sorting-synching/dirtyCS.db.gz 
 ```
-
 or 
-
 ```Bash
 N=005; ./fetch-first-changes.rb corrections${N} DATA-by-num/${N}/etherpad.log.gz DATA-by-num/${N}/dirtyCS.db.gz 
 ```
 
 
 run the following command to extract the pad at the right time (output files are generated in /tmp directory):
-
 ```Bash
 ./resynch-changes-to-get-revision.rb films017 sorting-synching/etherpad.log.gz sorting-synching/dirtyCS.db.gz sorting-synching/dirty.db.gz a.GXaGD5oiTgPmEMN5 1369722157631
 ```
-
 or
-
 ```Bash
 N=017; ID=a.GXaGD5oiTgPmEMN5; TSTAMP=1369722157631; ./resynch-changes-to-get-revision.rb films${N} DATA-by-num/${N}/etherpad.log.gz DATA-by-num/${N}/dirtyCS.db.gz DATA-by-num/${N}/dirty.db.gz ${ID} ${TSTAMP}
 ```

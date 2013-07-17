@@ -30,7 +30,7 @@ This file provides for each experiment the value that was used for the delay par
 
 
 | Delay | Groups                |
-|------:|--------------~-------:|
+|------:|----------------------:|
 |     0 | 1,  6, ~~11~~, 17, 19 |
 |     4 | 2,  4, 14, 18,        |
 |     6 | 7,  8, 12, 21         |
