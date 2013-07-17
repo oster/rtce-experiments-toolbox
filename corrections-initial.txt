@@ -1,0 +1,22 @@
+40 ans d’interaction homme-machine : points de repère et perspectives 
+Depuis qu'existe les ordinateur, la question de l'interface avec les utilisateurs s'est posé. En quarante ans, l'interaction homme-machine (IHM) a permit de rendre l'informatique accesible à un plus grand nombre, d'une façon que nul ne pouvais prédire. Que serait le visage de l'informatique aujourd'hui sans les interfasses graphiques ?
+
+
+S'il est vrai que la programmation aux clés des premiers ordinateurs pourrait être qualifiée de « manipulation directe » au sens littéral du terme, et si l'on peut présenté l'invention des langages de programation comme un moyen de facilité l'interaction avec les machine informatique, se sont bien les travaux de Ivan Sutherland sur SketchPad aux début des années 1960 qui marquent le début de l'histoires de l'interaction homme-machine.
+La suite de ce document présentent quelques poin de repère importants de cette istoire de l'IHM. Il ne prétend en aucun cas être exaustif . L'objectif est de mettre en regard les travaux des pionnier de l'interaction homme-machine avec les sistèmes interactif commerciaux actuels, et d'attirer ainsi l'attenssion sur le décalaje entre l'état de l'art et les standards du marcher.
+
+Ivan Sutherland : de SketchPad à la réalité virtuelle
+
+SketchPad, développé par Ivan Sutherland au début des années 1960 et publiée dans sa thèse de doctorat en 1963, est considéré comme la première interface graphique. Développé au MIT Lincoln Laboratory, c'est le premier système a utilisé un écran cathodique et un crayon optique pour permétre l'édition graphique de dessin techniques. Bien plus tard, en 1983, Ben Shneiderman appellera ce type d'interaction avec des objets représenté à l'écran « manipulation directe », par contraste avec l'utilisation sistématique, jusqu'au débus des années 1980, de langages de comandes obligeant à mémauriser les noms des commandes et des objets.
+De nombreux concepts fondamentaux des interfaces graphiques on pour origine SketchPad : désignation directe des objets à l'écran, rettour d'information imédiat sous forme de lignes élastiques, placement des segment d'une figurre par contraintes (parallèle, angle droit...), zoom avant et arrière sur le dessin avec un facteur de 2000, etc. Même au niveau de la mise en œuvre, les conssepts sont étonnamment modernes : représentation des objet graphiques en mémoire, résolussion de contrintes, système de rendu graphique.
+
+
+
+Sutherland développe SketchPad sur le TX-2, l'un des rares ordinateur de l'époqe utilisable en ligne : jusqu'à la faim des années 1970, la grande majoritée des ordinateurs sont utilisées de façon non interactive, en traitement par lots (« batch »). Le TX-2 a 320 Ko de mémoire, deux fois plus que les plus gros ordinateurs commerciaux de l'époque, une unité de bande magnétique, la première imprimente de Xerox, et l'entrée des programmes se fait par ruban perforée. Surtout, le TX-2 a un écran cathodique (en fait un oscilloscope) de 9 pouces (21 cm), un crayon optique, et un panneau de boutons que Sutherland utilisent pour construire son interface. À la même époque, d'autres chercheurs utilise le TX-2 pour réalisé d'autres interfaces révolutionaires, comme Genesys, le premier système d'animation de l'histoire créé par Ron Baecker.
+Peu apret, Ivan Sutherland devient l'un des pionniers de l'infographie, avec notamment un algorithme d'élimination des parties cachées qui porte son nom, et de la réalité virtuel. En 1967, alors qu'il est profeseur à Harvard, il crée avec son étudient Bob Sproull le premier casque de réalité virtuelle affichan des images de syntèse. Plus tard encore, il s'intéresse à la robotique, et crée l'entreprise Evans & Sutherland, célèbre dans les années 1980 pour ses systèmes graphiques hau de game.
+
+
+http://interstices.info/jcms/c_23015/40-ans-dinteraction-homme-machine-points-de-repere-et-perspectives (extrait)
+Michel Baudouin-Lafon 
+
+

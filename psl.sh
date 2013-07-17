@@ -5,12 +5,9 @@
 #
 #
 
-TSTAMP=`./timestamp.sh`
 SSH_HOST="./SSH_HOSTS.cfg"
 SSH_USER="score"
 SSH_CMD="pssh -h ${SSH_HOST} -l ${SSH_USER}"
 
-${SSH_CMD} "mkdir ~/rtce || true"
-
-echo "Starting screen capture..."
-${SSH_CMD} "./rtce-experiments-toolbox/capture-start.sh ${TSTAMP} ~/rtce &" 
+echo "Downloading screen capture..."
+pslurp -h ${SSH_HOST} -r -l ${SSH_USER} /home/${SSH_USER}/rtce .
