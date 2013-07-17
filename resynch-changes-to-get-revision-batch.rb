@@ -207,7 +207,7 @@ data = {
 
 
 [6, 7, 8, 9, 10].each do |duration|
-  [5, 6, 7, 8, 9, 10, 12, 13, 14, 16, 17, 18, 19, 20, 21].each do |group|
+  [5, 6, 7, 8, 9, 10, 12, 13, 14, 16, 17, 18, 19, 20, 21, 25].each do |group|
     [:corrections, :films].each do |experiment|
               
       if group == 14 && experiment == :films then num = 15 else num = group end  # to fix group number for bad experimentation
