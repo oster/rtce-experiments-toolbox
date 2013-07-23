@@ -14,8 +14,9 @@ import math
 #files = [ 'films013-7mn-wo-actors.txt' ]
 
 DATA_PATH='./'
-files = [ 'final-reversed-unique.txt' ]
-#files = [ 'final.txt' ]
+#files = [ 'final-reversed-unique.txt' ]
+files = [ 'final-reversed.txt' ]
+#files = [ '3.txt']
 
 pp = pprint.PrettyPrinter(indent=4)
 
@@ -55,13 +56,14 @@ for target_file in sorted(files):
 			swap = swap + 1
 			target_movies[j-1], target_movies[j] = target_movies[j], target_movies[j-1]
 			j = j - 1
-		if x != j:
-			swap = swap + 1 
+		#if x != j:
+		#	swap = swap + 1 
 
 	N = len(target_movies)
-	coef =  1 - float(swap) / ((N * (N + 1)) / 2) 
-
-	print '- correlation: %.6f - computed on %s element(s) - swap count = %s' % (coef, len(target_movies), swap)
-	print
+	sum = (N * (N - 1)) / 2
 	
+	coef =  1 - float(swap) / sum 
+
+	print '- correlation: %.6f - computed on %s element(s) - swap count = %s / %s' % (coef, len(target_movies), swap, sum)
+	print
 	
