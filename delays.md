@@ -4,7 +4,7 @@ This file provides for each experiment the value that was used for the delay par
 
 
 | Group | Delay (in s.) | Notes                                                                                                    | 
-|------:|--------------:|:--------------------------------------------------------------------------------------------------------:|
+|------:|--------------:|:--------------------------------------------------------------------------------------------------------–|
 |  G1   |             0 | no client information                                                                                    |
 |  G2   |             4 | no client information                                                                                    |
 |  G3   |             8 | no client information                                                                                    |
