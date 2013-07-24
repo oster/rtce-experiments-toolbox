@@ -7,8 +7,10 @@ import pprint
 import math
 
 
-DATA_PATH='./DATA-9mn/'
-files = [f for f in os.listdir(DATA_PATH) if re.match(r'films[0-9]{3}-9mn-wo-actors\.txt', f)]
+#DATA_PATH='./DATA-6mn/'
+DATA_PATH='./DATA/'
+files = [f for f in os.listdir(DATA_PATH) if re.match(r'films[0-9]{3}-wo-actors\.txt', f)]
+#files = [f for f in os.listdir(DATA_PATH) if re.match(r'films[0-9]{3}-6mn-wo-actors\.txt', f)]
 
 #DATA_PATH='./DATA-7mn/'
 #files = [ 'films013-7mn-wo-actors.txt' ]
