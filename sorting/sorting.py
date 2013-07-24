@@ -10,15 +10,18 @@ import math
 #DATA_PATH='./DATA-9mn/'
 #files = [f for f in os.listdir(DATA_PATH) if re.match(r'films[0-9]{3}-9mn-wo-actors\.txt', f)]
 
-#DATA_PATH='./DATA-7mn/'
-#files = [ 'films013-7mn-wo-actors.txt' ]
+DATA_PATH='./DATA-7mn/'
+files = [ 'films013-7mn-wo-actors.txt' ]
 
-DATA_PATH='./'
+#DATA_PATH='./'
 #files = [ 'final-reversed-unique.txt' ]
-files = [ 'final-reversed.txt' ]
-#files = [ '3.txt']
+#files = [ 'final-reversed.txt' ]
 
 pp = pprint.PrettyPrinter(indent=4)
+
+
+def sum_1_n(n):
+	return (n * (n - 1)) / 2
 
 for target_file in sorted(files):
 	print '##', target_file 
@@ -48,6 +51,18 @@ for target_file in sorted(files):
 		print list(set(titles(target_movies)) - set(titles(standard_movies)))
 		raise Exception(msg)
 	
+	
+	
+	clusters_by_year = {}
+	for movie in target_movies:
+		v = 0
+		if movie['year'] in clusters_by_year:
+			v = clusters_by_year[movie['year']]		
+		clusters_by_year[movie['year']] = v + 1
+		
+	sum_movies_with_duplicated_year = sum(map(sum_1_n, clusters_by_year.values()))
+	
+	
 	swap = 0	
 	for i in range(1,len(target_movies)):
 		j = i
@@ -56,13 +71,9 @@ for target_file in sorted(files):
 			swap = swap + 1
 			target_movies[j-1], target_movies[j] = target_movies[j], target_movies[j-1]
 			j = j - 1
-		#if x != j:
-		#	swap = swap + 1 
 
-	N = len(target_movies)
-	sum = (N * (N - 1)) / 2
-	
-	coef =  1 - float(swap) / sum 
+	sum = sum_1_n(len(target_movies)) - sum_movies_with_duplicated_year	
+	coef =  1 - float(swap) / sum
 
 	print '- correlation: %.6f - computed on %s element(s) - swap count = %s / %s' % (coef, len(target_movies), swap, sum)
 	print
