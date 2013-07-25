@@ -7,10 +7,10 @@ import pprint
 import math
 
 
-#DATA_PATH='./DATA-6mn/'
-DATA_PATH='./DATA/'
-files = [f for f in os.listdir(DATA_PATH) if re.match(r'films[0-9]{3}-wo-actors\.txt', f)]
-#files = [f for f in os.listdir(DATA_PATH) if re.match(r'films[0-9]{3}-6mn-wo-actors\.txt', f)]
+DATA_PATH='./DATA-10mn/'
+#DATA_PATH='./DATA/'
+#files = [f for f in os.listdir(DATA_PATH) if re.match(r'films[0-9]{3}-wo-actors\.txt', f)]
+files = [f for f in os.listdir(DATA_PATH) if re.match(r'films[0-9]{3}-10mn-wo-actors\.txt', f)]
 
 #DATA_PATH='./DATA-7mn/'
 #files = [ 'films013-7mn-wo-actors.txt' ]
@@ -74,7 +74,8 @@ for target_file in sorted(files):
 			j = j - 1
 
 	worst_case_swap = sum_1_n(len(target_movies)) - sum_movies_with_duplicated_year	
-	coef =  1 - float(swap) / worst_case_swap
+	coef =  (1 - float(swap) / worst_case_swap) * len(target_movies)
+
 
 	print '- correlation: %.6f - computed on %s element(s) - swap count = %s / %s' % (coef, len(target_movies), swap, worst_case_swap)
 	print
