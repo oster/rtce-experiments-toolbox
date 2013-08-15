@@ -3,10 +3,10 @@
 
 | Group | File     | Timestamp of 1st changes |     User id        | Notes                                                                            |
 |------:|---------:|:------------------------:|:------------------:|:---------------------------------------------------------------------------------|
-|  G1   | films001 |           XXXXXXXXXXXXX  |                    |                                                                                  |
-|  G2   | films002 |           XXXXXXXXXXXXX  |                    |                                                                                  |
-|  G3   | films003 |           XXXXXXXXXXXXX  |                    |                                                                                  |
-|  G4   | films004 |           XXXXXXXXXXXXX  |                    |                         all previous exp did not record server info to sync ;(   |
+|  G1   | films001 |           1337603034818  | a.m3i9ZlXoApDoDBca | 14:23:54,818 [ 1337603034818 ]:       from server log (no record of client info) |
+|  G2   | films002 |           1337863011817  | a.T3a9ef7SR0nCjcgB | 14:36:51,817 [ 1337863011817 ]:       from server log (no record of client info) |
+|  G3   | films003 |           1338992717887  | a.6Fu3ePE1Qfgjl0ky | 16:25:17,887 [ 1338992717887 ]:       from server log (no record of client info) |
+|  G4   | films004 |           1340721137164  | a.Fjb4qfZXvpdxYPDu | 16:32:17,164 [ 1340721137164 ]:       from server log (no record of client info) |
 |  G5   | films005 |           1341576722586  | a.T3a9ef7SR0nCjcgB | 14:12:02,586 [ 1341576722586 ]: 1..988                                           |
 |  G6   | films006 |           1342438193039  | a.6Fu3ePE1Qfgjl0ky | 13:29:53,039 [ 1342438193039 ]: 7 juillet 1988                                   |
 |  G7   | films007 |           1342767711599  | a.T3a9ef7SR0nCjcgB | 09:01:51,599 [ 1342767711599 ]: 1988                                             |
@@ -29,10 +29,10 @@
 
 | Group |     File       | Timestamp of 1st changes |     User id        | Notes                                 |
 |------:|---------------:|:------------------------:|:------------------:|:--------------------------------------|
-|  G1   | corrections001 |           XXXXXXXXXXXXX  |                    |                                       |
-|  G2   | corrections002 |           XXXXXXXXXXXXX  |                    |                                       |
-|  G3   | corrections003 |           XXXXXXXXXXXXX  |                    |                                       |
-|  G4   | corrections004 |           XXXXXXXXXXXXX  |                    |                                       |
+|  G1   | corrections001 |           1337602305803  | a.m3i9ZlXoApDoDBca | 14:11:45,803 [ 1337602305803 ]:     from server log  |
+|  G2   | corrections002 |           1337862306730  | a.6Fu3ePE1Qfgjl0ky | 14:25:06,730 [ 1337862306730 ]:     from server log  |
+|  G3   | corrections003 |           1338991984362  | a.T3a9ef7SR0nCjcgB | 16:13:04,362 [ 1338991984362 ]:     from server log  |
+|  G4   | corrections004 |           1340720367688  | a.m3i9ZlXoApDoDBca  |16:19:27,688 [ 1340720367688 ]:     from server log  |
 |  G5   | corrections005 |           1341575940928  | a.Fjb4qfZXvpdxYPDu | 13:59:00,928 [ 1341575940928 ]: s     |
 |  G6   | corrections006 |           1342437363889  | a.Fjb4qfZXvpdxYPDu | 13:16:03,889 [ 1342437363889 ]: n     |
 |  G7   | corrections007 |           1342766847306  | a.6Fu3ePE1Qfgjl0ky | 08:47:27,306 [ 1342766847306 ]: u     |
