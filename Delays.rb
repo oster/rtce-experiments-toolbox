@@ -5,23 +5,23 @@ class Delays
 @@data = {
     1 => { :group => 1,
            :delay => 0,
-           :corrections => { :timestamp => nil, :userid => nil },
-           :films => { :timestamp => nil, :userid => nil }
+           :corrections => { :timestamp => 1337602305803, :userid => 'a.m3i9ZlXoApDoDBca' },
+           :films => { :timestamp => 1337603034818, :userid => 'a.m3i9ZlXoApDoDBca' }
     },
     2 => { :group => 2,
            :delay => 4,
-           :corrections => { :timestamp => nil, :userid => nil },
-           :films => { :timestamp => nil, :userid => nil }
+           :corrections => { :timestamp => 1337862306730, :userid => 'a.6Fu3ePE1Qfgjl0ky' },
+           :films => { :timestamp => 1337863011817, :userid => 'a.T3a9ef7SR0nCjcgB' }
     },
     3 => { :group => 3,
            :delay => 8,
-           :corrections => { :timestamp => nil, :userid => nil },
-           :films => { :timestamp => nil, :userid => nil }
+           :corrections => { :timestamp => 1338991984362, :userid => 'a.T3a9ef7SR0nCjcgB' },
+           :films => { :timestamp => 1338992717887, :userid => 'a.6Fu3ePE1Qfgjl0ky' }
     },
     4 => { :group => 4,
            :delay => 4,
-           :corrections => { :timestamp => nil, :userid => nil },
-           :films => { :timestamp => nil, :userid => nil }
+           :corrections => { :timestamp => 1340720367688, :userid => 'a.m3i9ZlXoApDoDBca' },
+           :films => { :timestamp => 1340721137164, :userid => 'a.Fjb4qfZXvpdxYPDu' }
     },
     #
     5 => { :group => 5,
