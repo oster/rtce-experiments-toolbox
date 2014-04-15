@@ -1,0 +1,121 @@
+{
+  "004": {
+    "notes": {
+         "init-rev": 3,
+         "first-change-rev": 8,
+         "end-of-audio-rev": 488 
+     }
+   },
+  "005": {
+    "notes": {
+         "init-rev": 4,
+         "first-change-rev": 6,
+         "end-of-audio-rev": 249 
+     }
+   },
+  "006": {
+    "notes": {
+         "init-rev": 3,
+         "first-change-rev": 3,
+         "end-of-audio-rev": 1396 
+     }
+   },
+  "007": {
+    "notes": {
+         "init-rev": 6,
+         "first-change-rev": 9,
+         "end-of-audio-rev": 295
+     }
+   },
+  "008": {
+    "notes": {
+         "init-rev": 3,
+         "first-change-rev": 3,
+         "end-of-audio-rev": 345 
+     }
+   },
+  "009": {
+    "notes": {
+         "init-rev": 4,
+         "first-change-rev": 4,
+         "end-of-audio-rev": 212 
+     }
+   },
+  "010": {
+    "notes": {
+         "init-rev": 4,
+         "first-change-rev": 7,
+         "end-of-audio-rev": 171 
+     }
+   },
+  "012": {
+    "notes": {
+         "init-rev": 3,
+         "first-change-rev": 4,
+         "end-of-audio-rev": 312 
+     }
+   },
+  "013": {
+    "notes": {
+         "init-rev": 3,
+         "first-change-rev": 8,
+         "end-of-audio-rev": 171 
+     }
+   },
+  "014": {
+    "notes": {
+         "init-rev": 3,
+         "first-change-rev": 4,
+         "end-of-audio-rev": 340 
+     }
+   },
+  "016": {
+    "notes": {
+         "init-rev": 3,
+         "first-change-rev": 4,
+         "end-of-audio-rev": 197 
+     }
+   },
+  "017": {
+    "notes": {
+         "init-rev": 3,
+         "first-change-rev": 5,
+         "end-of-audio-rev": 1467 
+     }
+   },
+  "018": {
+    "notes": {
+         "init-rev": 3,
+         "first-change-rev": 3,
+         "end-of-audio-rev": 404 
+     }
+   },
+  "019": {
+    "notes": {
+         "init-rev": 3,
+         "first-change-rev": 3,
+         "end-of-audio-rev": 1233 
+     }
+   },
+  "020": {
+    "notes": {
+         "init-rev": 3,
+         "first-change-rev": 3,
+         "end-of-audio-rev": 240 
+     }
+   },
+  "021": {
+    "notes": {
+         "init-rev": 3,
+         "first-change-rev": 4,
+         "end-of-audio-rev": 319 
+     }
+   },
+  "025": {
+    "notes": {
+         "init-rev": 3,
+         "first-change-rev": 3,
+         "end-of-audio-rev": 172 
+     }
+   }
+}
