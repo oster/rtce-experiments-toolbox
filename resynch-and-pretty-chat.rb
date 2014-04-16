@@ -40,18 +40,14 @@ end
 # end
 
 if ARGV.size < 2
-  puts "usage: resynch-and-convert-chat-srt num pad_id etherpad_log [user_id delay_in_ms]"
+  puts "usage: resynch-and-convert-chat-srt num pad_id delay_in_ms"
   Process.exit(0)
 else
   num = ARGV[0]
   padid = ARGV[1]
-#  etherpad_log_file = ARGV[2]
-#  userid = ARGV[3]
-  delay = ARGV[4]
+  delay = ARGV[2].to_i
 end
 
-
-#chat_file = "DATA/CHATS/#{padid}-chat.json"
 chat_file = "DATA-by-num/#{num}/#{padid}-chat.json"
 
 messages = []
@@ -77,31 +73,19 @@ first_message_time = messages[0]['time'].to_i # 1369729338902
 #   delay_to_apply_in_ms = delay_to_apply_in_ms + delay.to_i
 # end
 
-delay_to_apply_in_ms = delay.to_i - (first_message_time + 3600000)
-
-
+#delay_to_apply_in_ms = delay - (first_message_time + 3600000)
+#delay_to_apply_in_ms = (first_message_time - delay)
+delay_to_apply_in_ms = -delay
 
 
 # This generate the same output as ./pretty-chat.js 
 # (except username maybe)
-#
-# messages.each do |msg| 
-#   puts '[' + format_timestamp(msg['time']) + '] ' + msg['userName'] + ':> ' + msg['text'] # msg['userId']
-# end
-
-counter = 1
 messages.each do |msg| 
-  puts counter
-  startTime = msg['time']
-  if counter < messages.size
-     endTime = messages[counter]['time']
-  else
-     endTime = startTime + 10 * 1000 # last message will remain for 10 sec.  
-  end
-  puts format_timestamp(startTime, delay_to_apply_in_ms) + ' --> ' + format_timestamp(endTime, delay_to_apply_in_ms)
-  puts msg['userName'] + ':> ' + msg['text']
-  counter = counter + 1
-  puts
+  userName = msg['userName']
+  if userName.nil? then
+    userName = 'anonymous'
+  end 
+  puts '[' + format_timestamp(msg['time'], delay_to_apply_in_ms) + '] ' + userName + ':> ' + msg['text'] # msg['userId']
 end
 
 
