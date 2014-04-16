@@ -68,7 +68,7 @@ def find_collisions(revs, standard_titles):
 				op = {}
 				op['rev'] = rev['rev']
 				timestamp = datetime.datetime.fromtimestamp(int(rev['timestamp']) / 1000)
-				op['timestamp'] = timestamp.strftime('%Y-%m-%d %H:%M:%S') #datetime.datetime(2005, 7, 14, 12, 30)
+				op['timestamp'] = timestamp.strftime('%Y-%m-%d %H:%M:%S')
 				op['time-in-second'] = timestamp.hour * 3600 + timestamp.minute * 60 + timestamp.second
 				op['user'] = userId(rev['author'])
 				op['type'] = count - collisions[title]['count']				
@@ -81,37 +81,55 @@ def find_collisions(revs, standard_titles):
 	
 	# removing initial insertion
 	for title in collisions:
+		admin_uid = None
 		for op in collisions[title]['history'][:]:
-			if op['rev'] == 1 and op['type'] == 1:
-				collisions[title]['history'].remove(op) # beware! dangerous!
-				
-	# removing cut-and-paste
-	for title in collisions:
-		prev_op = None
-		for op in collisions[title]['history'][:]:
-			if not prev_op is None:
-				if prev_op['type'] == -1 and op['type'] == +1 and prev_op['user'] == op['user']:
-					collisions[title]['history'].remove(prev_op)
-					collisions[title]['history'].remove(op)				
-					prev_op = None
-				else:
-					prev_op = op
-			else:
-				prev_op = op
-	
-	# removing copy-paste-cut
-	for title in collisions:
-		prev_op = None
-		for op in collisions[title]['history'][:]:
-			if not prev_op is None:
-				if prev_op['type'] == 1 and op['type'] == -1 and prev_op['user'] == op['user']:
-					collisions[title]['history'].remove(prev_op)
+			#if op['rev'] == 1 and op['type'] == 1:
+			if admin_uid is None:
+				collisions[title]['history'].remove(op)
+				admin_uid = op['user']
+			elif op['user'] == admin_uid:
 					collisions[title]['history'].remove(op)
-					prev_op = None
-				else:
-					prev_op = op
-			else:
-				prev_op = op
+									
+#	# removing cut-and-paste
+#	for title in collisions:
+#		prev_op = None
+#		for op in collisions[title]['history'][:]:
+#			if not prev_op is None:
+#				if prev_op['type'] == -1 and op['type'] == +1 and prev_op['user'] == op['user']:
+#					collisions[title]['history'].remove(prev_op)
+#					collisions[title]['history'].remove(op)	
+#					prev_op = None
+#				else:
+#					prev_op = op
+#			else:
+#				prev_op = op
+#	
+#	# removing copy-paste-cut
+#	for title in collisions:
+#		prev_op = None
+#		for op in collisions[title]['history'][:]:
+#			if not prev_op is None:
+#				if prev_op['type'] == 1 and op['type'] == -1 and prev_op['user'] == op['user']:
+#					collisions[title]['history'].remove(prev_op)
+#					collisions[title]['history'].remove(op)
+#					prev_op = None
+#				else:
+#					prev_op = op
+#			else:
+#				prev_op = op
+
+	# remove if modifications were performed by a single user
+	for title in collisions:
+		first_uid = None
+		modified_by_multiple_users = False
+		for op in collisions[title]['history'][:]:
+			if first_uid is None:
+				first_uid = op['user']
+			elif first_uid != op['user']:
+				modified_by_multiple_users = True
+				break
+		if not modified_by_multiple_users:
+			collisions[title]['history'] = []
 	
 	# cleaning - removing title with empty collision history
 	cleaned_collisions = {}
@@ -136,17 +154,30 @@ for group in ('001', '002', '003', '004', '005', '006', '007', '008', '009', '01
 		num = '015'
 	else:
 		num = group
-	
+
+	last_uid = -1
+	user_ids = {}
+		
 	revisions = load_pad_revisions(INPUT_DATA_PATH + group + '/dirty.db.gz', 'films' + num)
 	collisions = find_collisions(revisions, standard_titles)
-
+	
 	f = open(OUTPUT_DATA_PATH + 'films' + num + '-collisions.txt', 'w')
 	f.write(pp.pformat(collisions))
 	f.close()
+	#print pp.pformat(collisions)
 
-
-
-
+# group = '007'
+# if group == '014':
+# 	num = '015'
+# else:
+# 	num = group
+# 
+# last_uid = -1
+# user_ids = {}
+# 
+# revisions = load_pad_revisions(INPUT_DATA_PATH + group + '/dirty.db.gz', 'films' + num)
+# collisions = find_collisions(revisions, standard_titles)
+# print pp.pformat(collisions)
 
 
 
